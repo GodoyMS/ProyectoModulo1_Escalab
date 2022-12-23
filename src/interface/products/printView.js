@@ -13,11 +13,11 @@ export const autoTemplateCard=()=>{
 
 
   const carNamesArray1=JSON.parse(localStorage.getItem('cardName'));
-  const carNamesArray=carNamesArray1 ? carNamesArray1 :[];
+  const carNamesArray=carNamesArray1 ? carNamesArray1 :[]; //IF ARRAY DOESN'T EXIST IN LOCALSTORAGE, CREATE EMPTY ARRAY
   const carPriceArray1=JSON.parse(localStorage.getItem('cardPrice'));
-  const carPriceArray=carPriceArray1? carPriceArray1 :[];
+  const carPriceArray=carPriceArray1? carPriceArray1 :[]; //IF ARRAY DOESN'T EXIST IN LOCALSTORAGE, CREATE EMPTY ARRAY
   const carImgArray1=JSON.parse(localStorage.getItem('cardImg'));
-  const carImgArray=carImgArray1? carImgArray1 :[];
+  const carImgArray=carImgArray1? carImgArray1 :[]; //IF ARRAY DOESN'T EXIST IN LOCALSTORAGE, CREATE EMPTY ARRAY
 
   //CREATING CARDS FOR AUTOS BEGINS
   autos.map(element => {
@@ -30,7 +30,7 @@ export const autoTemplateCard=()=>{
   
   //LINKING THE MODAL//
   const buyModalButton=document.getElementsByClassName(`cartModalButton${element.codigo}`);
-  buyModalButton[0].addEventListener('click',()=>{
+  buyModalButton[0].addEventListener('click',()=>{ //COMPRAR BUTTON IN MODAL VIEW
     //STORAGE PRODUCT IN ARRAY, IF IT ALREADY EXISTS,  THROW A MESSAGE 
     if (!carNamesArray.includes(element.name)){
     carNamesArray.push(`${element.name}`);
@@ -50,7 +50,7 @@ export const autoTemplateCard=()=>{
 
   });
 
-  buyModalButton[1].addEventListener('click',()=>{
+  buyModalButton[1].addEventListener('click',()=>{ //COMPRAR BUTTON IN MAIN VIEW
     //STORAGE PRODUCT IN ARRAY, IF IT ALREADY EXISTS,  THROW A MESSAGE 
     if (!carNamesArray.includes(element.name)){
     carNamesArray.push(`${element.name}`);
@@ -84,13 +84,13 @@ export const vanTemplateCard=()=>{
 
 
   const carNamesArrayVan1=JSON.parse(localStorage.getItem('cardNameVan'));
-  const carNamesArrayVan=carNamesArrayVan1 ? carNamesArrayVan1 :[];
+  const carNamesArrayVan=carNamesArrayVan1 ? carNamesArrayVan1 :[]; //IF ARRAY DOESN'T EXIST IN LOCALSTORAGE, CREATE EMPTY ARRAY
 
   const carPriceArrayVan1=JSON.parse(localStorage.getItem('cardPriceVan'));
-  const carPriceArrayVan=carPriceArrayVan1? carPriceArrayVan1 :[];
+  const carPriceArrayVan=carPriceArrayVan1? carPriceArrayVan1 :[]; //IF ARRAY DOESN'T EXIST IN LOCALSTORAGE, CREATE EMPTY ARRAY
 
   const carImgArrayVan1=JSON.parse(localStorage.getItem('cardImgVan'));
-  const carImgArrayVan=carImgArrayVan1? carImgArrayVan1 :[];
+  const carImgArrayVan=carImgArrayVan1? carImgArrayVan1 :[]; //IF ARRAY DOESN'T EXIST IN LOCALSTORAGE, CREATE EMPTY ARRAY
 
   //CREATING CARDS FOR AUTOS BEGINS
   vans.map(element => {
