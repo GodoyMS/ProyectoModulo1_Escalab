@@ -1,20 +1,20 @@
 
 import {  cartSingleProduct,buyEverything } from "../../utils/nodes.js";
 
-//AUTO CARD TEMPLATE
 
 
-const createSingleProductCart=()=>{
+//Cart products view for Autos
+
+export const createSingleProductCartAuto=()=>{
   const cartProductsName=JSON.parse(localStorage.getItem('cardName'));
   const cartProductsPrice=JSON.parse(localStorage.getItem('cardPrice'));
   const cartProductsImg=JSON.parse(localStorage.getItem('cardImg'));
-
-
+  
   for (let index = 0; index < cartProductsName.length; index++) {
+    //Creating  views for autos 
     const name = cartProductsName[index];
     const price = cartProductsPrice[index];
     const img = cartProductsImg[index];
-
     const listItem=document.createElement('div');
     listItem.setAttribute('class','list__item');
     listItem.innerHTML=`<figure>
@@ -31,8 +31,9 @@ const createSingleProductCart=()=>{
 
   </div>`;
   cartSingleProduct.appendChild(listItem);
+  //Creating  views for autos finishes
 
-
+  //Erase single auto product from cart
   const eraseItem=document.getElementById(`eraseItem${name}`);
   eraseItem.addEventListener('click',()=>{
     cartProductsImg.splice(cartProductsImg.indexOf(img), 1);
@@ -44,37 +45,24 @@ const createSingleProductCart=()=>{
 
     cartProductsPrice.splice(cartProductsPrice.indexOf(price), 1);
     localStorage.setItem("cardPrice", JSON.stringify(cartProductsPrice));       
-    console.log(cartProductsImg);
 
-    console.log(index);
-    console.log(cartProductsName);
-    window.alert('Item borrado');
-    
-    location.reload();
-    
-
-
-
+    window.alert('Item borrado');   
+    location.reload();//To show updates when cart products added
   })
-
-
-
-    
-  };
-
-
-
-
+ };
 }
 
 
-const createSingleProductCartVan=()=>{
+
+//Cart products view for Vans
+export const createSingleProductCartVan=()=>{
   const cartProductsNameVan=JSON.parse(localStorage.getItem('cardNameVan'));
   const cartProductsPriceVan=JSON.parse(localStorage.getItem('cardPriceVan'));
   const cartProductsImgVan=JSON.parse(localStorage.getItem('cardImgVan'));
 
 
   for (let i = 0; i  < cartProductsNameVan.length; i ++) {
+    //Creating  views for vans 
     const nameVan = cartProductsNameVan[i ];
     const priceVan = cartProductsPriceVan[i ];
     const imgVan = cartProductsImgVan[i ];
@@ -95,8 +83,9 @@ const createSingleProductCartVan=()=>{
 
   </div>`;
   cartSingleProduct.appendChild(listItemVan);
+   //Creating  views for vans finishes
 
-
+  //Erase single auto product from cart
   const eraseItemVan=document.getElementById(`eraseItem${nameVan}`);
   eraseItemVan.addEventListener('click',()=>{
     cartProductsImgVan.splice(cartProductsImgVan.indexOf(imgVan ), 1);
@@ -109,25 +98,13 @@ const createSingleProductCartVan=()=>{
     cartProductsPriceVan.splice(cartProductsPriceVan.indexOf(priceVan ), 1);
     localStorage.setItem("cardPriceVan", JSON.stringify(cartProductsPriceVan));       
     window.alert('Item borrado');
-    location.reload();
-    
-
-
-
-  })
-
-
-
-    
+    location.reload(); //To show updates when cart products added
+})
   };
-
-
-
-
 }
 
-//ERASE ALL PRODUCTS WHEN CLICK BUY PRODUCTS
-const buyEverythingFunction=()=>{
+//ERASE ALL PRODUCTS WHEN CLICKED 'Comprar' button
+export const buyEverythingFunction=()=>{
   buyEverything.addEventListener('click',()=>{
     localStorage.removeItem('cardImg');
     localStorage.removeItem('cardPrice');
@@ -138,16 +115,5 @@ const buyEverythingFunction=()=>{
   })
 
 }
-
-const onloadCartCars=()=>{  
-  createSingleProductCart(); 
-  buyEverythingFunction();
-}
-const onloadCartVans=()=>{  
-  createSingleProductCartVan();
-  buyEverythingFunction();
-}
-window.addEventListener("load",()=>onloadCartCars());
-window.addEventListener("load",()=>onloadCartVans());
 
 
