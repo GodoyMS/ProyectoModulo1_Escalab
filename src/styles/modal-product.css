@@ -1,0 +1,91 @@
+.modalBig {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color:var(--orange);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top:100px;
+    right:2rem;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color:gray;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .containImgModal {
+    width: 100%;
+    
+  }
+  .textModal{
+    width:100%;
+  }
+  .imgModal{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .buttonsModal{
+    display: flex;
+    padding:2rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap:1rem;
+  }
+
+  .buttonsModal :nth-child(1){
+    background-color: var(--orange);
+    padding:0.5rem 1rem;
+    border-radius: 15px;
+    color:#fefefe;
+  }
+  .buttonsModal :nth-child(2){
+    background-color: white;
+    padding:0.5rem 1rem;
+    border-color: var(--orange);
+    border-radius: 15px;
+    border-width: 1px;
+    border-style:solid  }
+  
+  @media (min-width:648px) {
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(1, minmax(0, 1fr));
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+      
+    
+  }

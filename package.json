@@ -1,0 +1,18 @@
+{
+  "name": "proyecto_final_modulo1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "npx prettier --write ."
+  },
+  "keywords": ["store","cars"],
+  "author": "Godoy Liam Muñoz Solorzano",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.8.1"
+  }
+}

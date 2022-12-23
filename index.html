@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Venta de carros y vans"/>    
+    <meta name="title" content="Deluxe GMS">
+    <meta name="author" content="Godoy Muñoz Solorzano">
+    <meta name="language" content="spanish">
+    <link rel="stylesheet" href="./src/styles/navbar.css" />
+    <link rel="stylesheet" href="./src/styles/header.css" />
+    <link rel="stylesheet" href="./src/styles/section.css" />
+    <link rel="stylesheet" href="./src/styles/products.css" />
+    <link rel="stylesheet" href="./src/styles/modal-product.css" />
+    <link rel="stylesheet" href="./src/styles/footer.css"/>
+    <title>Deluxe GMS</title>
+  </head>
+
+  <body>
+    <!-- navbar -->
+
+    <nav class="navbar">
+      <figure>
+        <a href="#"><img  src="./public/assets/logo_brand.png" alt="" /></a>
+      </figure>
+      <ul class="containItem">
+        <a style="text-decoration: none;color:white;" href="#autosTitle"><li  class="item">Autos</li></a>
+        <a style="text-decoration: none;color:white;" href="#vansTitle"><li  class="item">Vans</li></a>
+        <li class="item desplegar">
+          <div style="display:flex; justify-content: center;"> <svg id="carrito-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
+          </div>
+          <div class="list">
+            <div id="list__buy" class="list__buy">
+              
+              
+              <!-- <div  class="list__item">
+                <figure>
+                  <img
+                    class="img__item"
+                    src="https://themark.com.co/wp-content/uploads/2022/07/CORSAIR-CARBIDE-SPEC-OMEGA-BLANCO-1.png"
+                    alt=""
+                  />
+                </figure>
+                <div>
+                  <h3 class="title__item">Nombre Prodcuto</h3>
+                  <p class="parrafo__item">descripción</p> 
+                  
+                </div>
+              </div> -->
+
+              
+
+              
+
+
+            </div>
+            <div class="list__button">
+             <a class="buyButton" href="thankYou.html" id="buyEverything" style="text-decoration:none;color:white" ><button>Comprar</button></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- header -->
+
+    <header class="header">
+      <div class="containText">
+        <h1 class="title">DELUXE GMS</h1>
+        <p class="parrafo">Venta de Autos y Vans.</p>
+        <a class="btnProductos"  href="#autosTitle">Ver Productos</a>
+      </div>
+    </header>
+
+   
+
+
+
+
+
+    <!---MAIN CONTENT (PRODUCTS)-->
+    
+    <main>
+      <h1 id="autosTitle"style="display: flex;justify-content: center;margin:2rem 0 1rem">AUTOS</h1>
+      <section id="autostest" class="productos"></section>
+      <!-- <section id="autos" class="productos"> -->
+        
+
+      <h1 id="vansTitle" style="display: flex;justify-content: center; margin:2rem 0 1rem">VANS</h1>
+      <section id="vanstest" class="productos"></section>
+        
+
+
+    </main>
+
+    <footer>
+      
+        <figure>
+          <a href="index.html"><img  src="./public/assets/logo_brand.png" alt="" /></a>
+        </figure>
+
+        <h2>Creado por Godoy Muñoz Solórzano</h2>
+
+      
+      
+
+    </footer>
+
+
+    <!-- <footer>
+      Todos los derechos reservados @2022
+    </footer> -->
+
+    <script src="src/interface/products/main.js" type="module"></script>
+    <script src="src/interface/carrito/carrito.js" type="module"></script>
+    
+  </body>
+
+</html>
